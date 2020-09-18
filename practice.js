@@ -49,6 +49,64 @@ const loop = (num) =>{
     
 }
 
-console.log(loop(nums))
+const words = [
+    "The", "killing", "complex", "houses",
+    "married", "kittens", "and", "single",
+    "soldiers", "and", "their", "kleptomaniacal",
+    "families"
+]
+const startsWithK = words.filter((word) => word.startsWith("k"));
 
-console.log(evenOrOdd(33))
+const joiner = (array) => array.join(', ')
+
+const fisherman = () => {
+    const random = Math.random() * 100
+    let caught = '';
+    if(random <= 33){
+      caught = 'Sven hooked a tuna!  :)'  
+    }
+    else{
+        caught = 'Sven came up empty-handed.  :('
+    }
+    return caught
+}
+
+const orderMeal = (sandwich, side, drink, dessert) => {
+    let orderObject = {
+        "sandwich": sandwich,
+        "side": side,
+        "drink": drink,
+        "dessert": dessert
+    }
+    return orderObject
+}
+
+const timesFive = number => number * 8
+ 
+
+const square = number => number * number
+
+
+const bigify = (number, operationFunction) => {
+    const result = operationFunction(number)
+    return result
+}
+
+const objectParam = {
+    firstName: "Donald",
+    lastName: "McLelland"
+}
+
+const chore1 = () => 'took out the trash'
+const chore2 = () => 'washed the dishes'
+const chore3 = () => 'made his bed'
+const chore4 = () => 'cokked dinner'
+const chore5 = () => 'cleaned the bathroom'
+const chore6 = () => 'mowed the yard'
+const choreBoy = (obj, chore) => {
+   return  `${obj.firstName} ${obj.lastName} ${chore}`
+ }
+
+const lazyDay = (chore, person, day) => `${person.firstName} ${person.lastName} ${chore} on ${day}`
+
+const dayPlanner = (chore1, chore2, chore3, person, day) => `On ${day} ${person.firstName} ${person.lastName} ${chore1}, and ${person.firstName} ${person.lastName} ${chore2}, and ${person.firstName} ${person.lastName} ${chore3}.`
